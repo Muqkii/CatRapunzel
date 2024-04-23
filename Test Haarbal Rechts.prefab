@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 4565474013857702243}
   - component: {fileID: 3161179256403936456}
   - component: {fileID: 5241461929221873267}
+  - component: {fileID: -4330115164367137458}
+  - component: {fileID: 212771773593728519}
   m_Layer: 0
   m_Name: Test Haarbal Rechts
   m_TagString: Haarbal Rechts
@@ -64,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0964bd35afcc34648b28d4b5796ce6f6, type: 2}
+  - {fileID: 2100000, guid: efa4f2da20f295f4da3183033bab765f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -149,3 +151,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4330115164367137458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4764265979757766878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f533f7491752e8848b789f03d2485548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchForce: 10
+  Launchpoint: {fileID: 0}
+  despawnDelay: 5
+--- !u!114 &212771773593728519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4764265979757766878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d8c75d4546ca64ea8d7f407779d032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 8
+  force: 800

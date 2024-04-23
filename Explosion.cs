@@ -13,6 +13,11 @@ public class Explosionagain : MonoBehaviour
     {
         keyTrigger();
 
+        bang();
+    }
+
+    void bang()
+    {
         if (kaboom) //if 'e' is pressed
         {
             knockBack(); // call knockback

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class SpawnHaarbal : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class SpawnHaarbal : MonoBehaviour
     public bool haarbalBestaat = false;
     public KeyCode spawnKey;
 
+    private GameObject spawnedObject;
+
     private void Update()
     {
         Spawn();
@@ -21,7 +24,8 @@ public class SpawnHaarbal : MonoBehaviour
     {
         if (Input.GetKeyDown(spawnKey) && haarbalBestaat == false && objectToSpawn != null &&  spawnPoint != null)
         {
-            Instantiate(objectToSpawn, spawnPoint.position, spawnPoint.rotation);
+            spawnedObject = Instantiate(objectToSpawn, spawnPoint.position, spawnPoint.rotation);
+            //obj.GetComponent<HaarbalBOOM>().Bang();
             haarbalBestaat = true;
         }
         else if (Input.GetKeyDown(spawnKey) && haarbalBestaat == true)
@@ -29,10 +33,12 @@ public class SpawnHaarbal : MonoBehaviour
             haarbalBestaat = false;
             if (linkerBal == true)
             {
+                spawnedObject.GetComponent<HaarbalBOOM>().Bang();
                 Destroy(GameObject.FindGameObjectWithTag("Haarbal Links"));
             }
             else if (linkerBal == false)
             {
+                spawnedObject.GetComponent<HaarbalBOOM>().Bang();
                 Destroy(GameObject.FindGameObjectWithTag("Haarbal Rechts"));
             }
         }

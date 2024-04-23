@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1278131837632324703}
   - component: {fileID: 5326464600153201843}
   - component: {fileID: -2876127775649503001}
+  - component: {fileID: 6747743459522886190}
+  - component: {fileID: 7409724163265339371}
   m_Layer: 0
   m_Name: Test Haarbal Links
   m_TagString: Haarbal Links
@@ -64,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 555a863f17e9c5a4ab1eab115e75e041, type: 2}
+  - {fileID: 2100000, guid: f76b00300661583468a0dcce027c0fa3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -149,3 +151,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6747743459522886190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8425825697381776407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f533f7491752e8848b789f03d2485548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchForce: 10
+  Launchpoint: {fileID: 0}
+  despawnDelay: 5
+--- !u!114 &7409724163265339371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8425825697381776407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d8c75d4546ca64ea8d7f407779d032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 8
+  force: 800
