@@ -31,6 +31,9 @@ public class Movement : MonoBehaviour
 
     Vector3 moveDirection;
 
+    public AudioSource src;
+    public AudioClip sfx1;
+
     Rigidbody rb;
 
     private void Start()
@@ -74,6 +77,8 @@ public class Movement : MonoBehaviour
 
             Jump();
 
+            MeowSound();
+
             Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
@@ -110,6 +115,12 @@ public class Movement : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+    }
+
+    private void MeowSound()
+    {
+        src.clip = sfx1;
+        src.Play();
     }
 
     private void ResetJump()
