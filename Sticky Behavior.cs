@@ -21,6 +21,7 @@ public class StickyBehavior : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
                 rb.isKinematic = true;
+                GetComponent<SphereCollider>().enabled = false;
             }
             stopped = true;
         }
